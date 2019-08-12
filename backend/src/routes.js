@@ -1,4 +1,6 @@
 const express = require('express');
+const DevController = require('./Controllers/DevController');
+
 const routes = express.Router();
 
 routes.get('/', (req, res) => {
@@ -6,10 +8,6 @@ routes.get('/', (req, res) => {
 });
 
 
-routes.post('/devs', (req, res) => {
-    console.log(req.body);
-
-    return res.json({ ok: true });
-});
+routes.post('/devs', DevController.store);
 
 module.exports = routes; 
