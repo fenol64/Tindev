@@ -1,7 +1,6 @@
 const axios = require('axios');
 const dev = require('../model/dev');
 
-
 module.exports = {
 
    async index(req, res)  {
@@ -20,8 +19,6 @@ module.exports = {
 
     return res.json(users);
 },
-
-
 
     async store(req, res){
         const { username } = req.body;
