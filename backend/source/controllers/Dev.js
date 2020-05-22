@@ -5,8 +5,6 @@ module.exports = {
     async index(request, response) {
         const { user } = request.headers
 
-        console.log("a")
-
         const loggedDev = await Dev.findById(user)
 
         const users = await Dev.find({
