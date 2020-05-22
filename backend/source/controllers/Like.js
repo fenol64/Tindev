@@ -10,6 +10,7 @@ module.exports = {
 
         if (!targetDev) {
             return response.status(400).json({ error: 'Dev not found'})
+            console.log("a")
         }
 
         loggedDev.likes.push(targetDev._id)
